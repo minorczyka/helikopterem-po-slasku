@@ -1,0 +1,11 @@
+{% load staticfiles %}
+
+<ul class="nav nav-sidebar">
+{% if summary %}
+    {% for s in summary %}
+        <li><a href="{% url 'person' s.person.id %}">{{ s.person.name }}: {{ s.points }}</a></li>
+    {% endfor %}
+{% else %}
+    <strong>Sorry :(</strong>
+{% endif %}
+</ul>

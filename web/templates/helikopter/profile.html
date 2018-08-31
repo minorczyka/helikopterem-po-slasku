@@ -1,0 +1,12 @@
+{% extends 'bootstrap_base.html' %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block title %}Edit profile{% endblock %}
+
+{% block body_block %}
+    <form id="profile_form" class="form-post" method="post" action="{% url 'edit_profile' %}" enctype="multipart/form-data" >
+        {% crispy profile_form %}
+    </form>
+{% endblock %}

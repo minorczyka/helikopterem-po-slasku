@@ -1,0 +1,5 @@
+- mruganie kart
+- zapełnienie listy w czasie aktualizacji
+- wcześniejsze wczytywanie dni w kalendarzu?
+- komunikat o błędzie przy logowaniu
+- historia

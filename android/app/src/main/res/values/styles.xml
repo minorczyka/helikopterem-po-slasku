@@ -1,0 +1,47 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+    </style>
+
+    <style name="AppTheme.WithoutActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="LoginTextLabel" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">@color/primary_light</item>
+        <item name="android:textSize">20sp</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorControlNormal">@color/primary_light</item>
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+
+    <style name="CardStatInnerLayout">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="CardStatInnerLayout.LightGray">
+        <item name="android:background">#515254</item>
+        <item name="android:textColor">#B3B2B2</item>
+    </style>
+
+    <style name="CardStatInnerLayout.LightGray.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CardStatInnerLayout.Dark">
+        <item name="android:background">#515254</item>
+        <item name="android:textColor">#FFF</item>
+    </style>
+
+    <style name="CardStatInnerLayout.Dark.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

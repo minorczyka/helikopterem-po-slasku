@@ -1,0 +1,20 @@
+{% extends 'bootstrap_base.html' %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block title %}Ride{% endblock %}
+
+{% block body_block %}
+
+	<h1>Ride</h1>
+
+    {% if update_id > 0 %} 
+        <form id="ride_form" class="form-post" method="post" action="{% url 'ride' update_id %}" enctype="multipart/form-data" >
+    {% else %}
+        <form id="ride_form" class="form-post" method="post" action="{% url 'new_ride' %}" enctype="multipart/form-data" >
+    {% endif %}
+            {% crispy ride_form %}
+	   </form>
+
+{% endblock %}

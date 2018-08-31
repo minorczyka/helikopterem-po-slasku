@@ -1,0 +1,42 @@
+{% extends 'bootstrap_base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Day{% endblock %}
+
+{% block body_block %}
+
+    <div class="page-header">
+        <h1>{{ day }}.{{ month }}.{{ year }}</h1>
+    </div>
+
+    <ul class="list-group">
+        {% for ride in rides %}
+            <li class="list-group-item">
+            <div class="well">
+                <div class="pull-left">
+                    <a href="{% url 'ride' ride.id %}" class="btn btn-info" role="button">{{ ride.driver.name }}</a>
+                </div>
+                <div class="pull-right">
+                    <a href="{% url 'delete_ride' ride.id %}" type="button" class="btn btn-danger">Remove</a>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+            <table class="table table-hover">
+                {% for passenger in ride.passengers.all %}
+                    <tr>
+                        <td>{{ passenger.person.name }}</td>
+                        {% if passenger.twice %}
+                            <td>2</td>
+                        {% else %}
+                            <td>1</td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </table>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'new_ride' %}" class="btn btn-primary" role="button">Add new ride</a>
+
+{% endblock %}

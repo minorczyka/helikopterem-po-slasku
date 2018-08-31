@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Helikopterem po Śląsku</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_main">Helikopterem po Śląsku</string>
+    <string name="title_activity_rides">Rides</string>
+
+    <string name="nav_menu_home">Home</string>
+    <string name="nav_menu_calendar">Calendar</string>
+    <string name="nav_menu_history">History</string>
+    <string name="nav_menu_logout">Logout</string>
+
+    <string name="item_ride_twice">Twice</string>
+    <string name="item_ride_once">Once</string>
+    <string name="ride_uncheck_all">Uncheck all</string>
+    <string name="ride_chech_once">Check once</string>
+    <string name="ride_check_twice">Check twice</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="connection_error">Connection error</string>
+    <string name="save_success">Successfully saved</string>
+    <string name="dialog_chose_driver">Chose driver</string>
+    <string name="dialog_download">Download</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_new_version_content">Do you want to download new version?</string>
+    <string name="dialog_new_version_title">New version</string>
+    <string name="login_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="login_submit">Login</string>
+    
+    <string name="history_add">%s added new ride</string>
+    <string name="history_remove">%s removed ride</string>
+    <string name="history_modify">%s modified ride</string>
+
+</resources>

@@ -1,0 +1,24 @@
+{% extends 'bootstrap_base.html' %}
+
+{% load staticfiles %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Register{% endblock %}
+
+{% block body_block %}
+
+	{% if registered %}
+	<h1>Registration Complete</h1>
+	<p>You are now registered</p>
+	<a href="/helikopter/">Return to the homepage.</a><br />
+	{% else %}
+	<h1>Register Here</h1>
+
+		<form id="user_form" class="form-post" action="{% url 'register' %}" class="uniForm" method="post">
+			{% csrf_token %}
+		    {% crispy register_form %}
+		</form>
+	{% endif %}
+
+{% endblock %}

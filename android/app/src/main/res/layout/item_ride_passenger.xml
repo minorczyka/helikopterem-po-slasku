@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/driver_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:textSize="19sp"
+        android:textColor="@color/primary_text"
+        android:text="@string/card_empty_cardwithlist_text"/>
+
+    <CheckBox
+        android:id="@+id/checkbox_twice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:textColor="@color/secondary_text"
+        android:text="@string/item_ride_twice"/>
+
+    <CheckBox
+        android:id="@+id/checkbox_once"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/checkbox_twice"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:textColor="@color/secondary_text"
+        android:text="@string/item_ride_once"/>
+</RelativeLayout>

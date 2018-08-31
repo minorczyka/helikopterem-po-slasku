@@ -1,0 +1,17 @@
+{% extends 'bootstrap_base.html' %}
+
+{% load staticfiles %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}New version{% endblock %}
+
+{% block body_block %}
+
+    <h1>Upload new Android version</h1>
+
+    <form id="apk_form" class="form-post" action="{% url 'download_add' %}" class="uniForm" method="post" enctype="multipart/form-data">
+        {% crispy form %}
+    </form>
+
+{% endblock %}

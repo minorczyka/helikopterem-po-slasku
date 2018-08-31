@@ -1,0 +1,22 @@
+{% extends 'bootstrap_base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body_block %}
+    <div class="container">
+        <form class="form-signin" method="post" action=".">
+            {% csrf_token %}
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <label for="id_username" class="sr-only">Username</label>
+            <input id="id_username" class="form-control" placeholder="Username" required="" autofocus="" maxlength="254" name="username" type="text">
+            <label for="id_password" class="sr-only">Password</label>
+            <input id="id_password" class="form-control" placeholder="Password" required="" name="password" type="password">
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+            <br>
+            <p>Not a member? <a href="{% url 'registration_register' %}">Register!</a></p>
+            <p><a href="{% url 'password_reset' %}">Reset password!</a></p>
+        </form>
+    </div>
+
+{% endblock %}

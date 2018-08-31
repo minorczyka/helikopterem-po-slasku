@@ -1,0 +1,25 @@
+{% extends 'bootstrap_base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Calendar{% endblock %}
+
+{% block body_block %}
+
+    <h1>Calendar</h1>
+	<table width="100%">
+	    <tr>
+	        <td width="33%" align="left">
+	          &lt;&lt; <a href="/helikopter/calendar/{{PreviousYear}}/{{PreviousMonth}}/">{{PreviousMonthName}} {{PreviousYear}}</a>
+	        </td>
+	        <td width="33%" align="center"><a href="/helikopter/calendar">Today</a></td>
+	        <td width="33%" align="right">
+	          <a href="/helikopter/calendar/{{NextYear}}/{{NextMonth}}/">{{NextMonthName}} {{NextYear}}</a> &gt;&gt;
+	        </td>
+	    </tr>
+	</table>
+	<div id="calendar">
+	  {{calendar}}
+	</div>
+
+{% endblock %}

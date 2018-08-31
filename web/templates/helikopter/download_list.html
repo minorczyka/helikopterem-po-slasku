@@ -1,0 +1,28 @@
+{% extends 'bootstrap_base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Download{% endblock %}
+
+{% block body_block %}
+
+    {% for version in object_list %}
+
+		<div class="panel panel-info">
+  			<div class="panel-heading">
+    			<h3 class="panel-title">{{ version.version_name }}</h3>
+  			</div>
+  			<div class="panel-body">
+  				<ul class="list-group">
+  					{% for feature in version.features.all %}
+        				<li class="list-group-item">{{ feature.text }}</li>
+        			{% endfor %}
+  				</ul>
+  				<a href="{{ version.version_code }}"><button type="button" class="btn btn-success">Download</button></a>
+  			</div>
+		</div>
+        {% empty %}
+        <li>Nothing happened yet.</li>
+    {% endfor %}
+
+{% endblock %}

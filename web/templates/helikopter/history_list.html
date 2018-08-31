@@ -1,0 +1,39 @@
+{% extends 'bootstrap_base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}History{% endblock %}
+
+{% block body_block %}
+    <ul class="list-group">
+        {% for history in object_list %}
+            {% if history.event == 0 %}
+                <li class="list-group-item list-group-item-success">{{ history.history_date|date:"d-m-Y h:m:s" }}<br>{{ history.person.name }} added {{ history.related_date|date:"d-m-Y" }}</li>
+            {% elif history.event == 1 %}
+                <li class="list-group-item list-group-item-danger">{{ history.history_date|date:"d-m-Y h:m:s" }}<br>{{ history.person.name }} removed {{ history.related_date|date:"d-m-Y" }}</li>
+            {% else %}
+                <li class="list-group-item list-group-item-info">{{ history.history_date|date:"d-m-Y h:m:s" }}<br>{{ history.person.name }} modified {{ history.related_date|date:"d-m-Y" }}</li>
+            {% endif %}
+            {% empty %}
+            <li>Nothing happened yet.</li>
+        {% endfor %}
+    </ul>
+
+
+    {% if is_paginated %}
+        <div class="pagination">
+            <span class="page-links">
+                {% if page_obj.has_previous %}
+                    <a href="/helikopter/history?page={{ page_obj.previous_page_number }}">previous</a>
+                {% endif %}
+                <span class="page-current">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                </span>
+                {% if page_obj.has_next %}
+                    <a href="/helikopter/history?page={{ page_obj.next_page_number }}">next</a>
+                {% endif %}
+            </span>
+        </div>
+    {% endif %}
+
+{% endblock %}

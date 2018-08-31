@@ -1,0 +1,47 @@
+[
+	{
+		"model": "helikopter.usercolor",
+		"pk": 1,
+		"fields": {
+			"textColor": "#FFFFFF",
+			"name": "Purple",
+			"backgroundColor": "#AA66CC"
+		}
+	},
+	{
+		"model": "helikopter.usercolor",
+		"pk": 2,
+		"fields": {
+			"textColor": "#FFFFFF",
+			"name": "Orange",
+			"backgroundColor": "#FFBB33"
+		}
+	},
+	{
+		"model": "helikopter.usercolor",
+		"pk": 3,
+		"fields": {
+			"textColor": "#FFFFFF",
+			"name": "Light Green",
+			"backgroundColor": "#99CC00"
+		}
+	},
+	{
+		"model": "helikopter.usercolor",
+		"pk": 4,
+		"fields": {
+			"textColor": "#FFFFFF",
+			"name": "Red",
+			"backgroundColor": "#FF4444"
+		}
+	},
+	{
+		"model": "helikopter.usercolor",
+		"pk": 5,
+		"fields": {
+			"textColor": "#FFFFFF",
+			"name": "Light Blue",
+			"backgroundColor": "#33B5E5"
+		}
+	}
+]

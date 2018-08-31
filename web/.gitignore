@@ -1,0 +1,5 @@
+*.pyc
+*.pyo
+helikopterem.sublime-workspace
+db.sqlite3
+/media
